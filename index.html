@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cipher Lock</title>
+    <link rel="icon" href="Logo.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: #292b2c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-direction: column;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header {
+            background-color: #45a049;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 10px 20px rgba(69, 160, 73, 0.5);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .left-text {
+            color: #45a049;
+            font-family: "Courier New", monospace;
+            font-size: 18px;
+            padding: 20px;
+            position: absolute;
+            left: 20px;
+            top: 90px;
+        }
+
+        .typing-text {
+            color: #45a049;
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #45a049;
+            animation: typing 2s steps(20, end) forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        .boxes-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 170px;
+        }
+
+        .box {
+            width: 300px;
+            height: 70px;
+            margin: 10px;
+            background-color: #45a049;
+            text-align: center;
+            line-height: 70px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(69, 160, 73, 0.3);
+        }
+
+        .box:hover {
+            background-color: #398a3e;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #45a049;
+            padding: 10px;
+            text-align: center;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cipher Lock</h1>
+    </header>
+
+    <div class="left-text" id="leftTextContainer">
+        <!-- Dynamic typing text will be added here --> 
+    </div>
+    
+    <script>
+        const textArray = [
+            "> Hello User!",
+            "> Welcome to Cipher lock - Your Robust Encryption and Decryption tool.",
+            "> Select your Desired Algorithm"
+        ];
+
+        let currentTextIndex = 0;
+        const leftTextContainer = document.getElementById("leftTextContainer");
+
+        function updateText() {
+            if (currentTextIndex < textArray.length) {
+                const newLine = document.createElement("p");
+                newLine.className = "typing-text";
+                newLine.innerText = textArray[currentTextIndex];
+                leftTextContainer.appendChild(newLine);
+                currentTextIndex++;
+            }
+        }
+
+        leftTextContainer.addEventListener("animationend", updateText);
+        // Initial text update
+        updateText();
+    </script>
+
+    <div class="boxes-container">
+        <a href="Base64.html" class="box">Base 64</a>
+        <a href="CaesarShiift.html" class="box">Caesar Cipher</a>
+        <a href="xor.html" class="box">XOR</a>
+        <a href="aes.html" class="box">Advanced Encryption Standard</a>
+        <a href="des.html" class="box">Data Encryption Standard</a>
+    </div>
+
+    <footer>
+        &copy; 2023 Cipher Lock. All rights reserved.
+    </footer>
+</body>
+</html>
