@@ -1,6 +1,6 @@
 # Cipher-Lock
 
-The Cipher-Lock is a comprehensive web-based tool designed to provide users with a versatile platform for performing various encryption and decryption operations. This toolkit encompasses a range of cryptographic algorithms, including Base64 encoding, Caesar Cipher, XOR encryption, AES encryption, and DES encryption.
+The Cipher-Lock is a comprehensive web-based tool designed to protect sensitive information during communication is critical in the digital era. This project provides a powerful text encryption and decryption program that addresses the critical need for safe data transport. The program provides users with a complete toolbox for safeguarding their textual data by providing a varied selection of encryption methods such as Base64 encoding, Caesar Cypher, XOR Cypher, AES, and Triple DES (DES).
 
 ## Table of Contents
 
