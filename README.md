@@ -88,3 +88,7 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+## Report
+
+You can download our report - [CIPHER LOCK-Report (PDF)](https://github.com/Lootera69/Cipher-Lock/blob/d1350f3432a6a9099baa08e0c2c1bb2bd1631c18/CIPHER%20LOCK-Report.pdf)
